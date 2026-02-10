@@ -3,7 +3,9 @@
 **GitHub High-Speed Mirror** یک Cloudflare Worker است که لینک‌های مستقیم و سریع از فایل‌های GitHub ایجاد می‌کند.  
 این سرویس مناسب توسعه‌دهندگان و کاربران است که نیاز دارند فایل‌ها را با سرعت بالا، پشتیبانی از Resume و کش طولانی دانلود کنند.
 
-- [GitHub High-Speed Mirror](https://gitdl.theazizi.ir)  
+- [GitHub High-Speed Mirror](https://gitdl.theazizi.ir)
+
+- [![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README-en.md)
 
 ---
 
