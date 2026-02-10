@@ -283,7 +283,7 @@ footer{
     <button class="btn-download" onclick="download()">دانلود</button>
   </div>
 
-  <footer>github.com/TheGreatAzizi</footer>
+  <footer>go.theazizi.ir/?s=GitHub-HSMirror</footer>
 </div>
 
 <script>
