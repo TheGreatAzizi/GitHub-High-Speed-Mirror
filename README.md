@@ -1,71 +1,74 @@
-# 🚀 GitHub High-Speed Mirror (Cloudflare Worker)
+# 🚀 GitHub High-Speed Mirror
 
-**GitHub High-Speed Mirror** یک Cloudflare Worker است که لینک‌های مستقیم و سریع از فایل‌های GitHub ایجاد می‌کند.  
-این سرویس مناسب توسعه‌دهندگان و کاربران است که نیاز دارند فایل‌ها را با سرعت بالا، پشتیبانی از Resume و کش طولانی دانلود کنند.
+[![Cloudflare Workers](https://img.shields.io/badge/Platform-Cloudflare_Workers-F38020?logo=cloudflare)](https://workers.cloudflare.com)
+![Repository Views](https://komarev.com/ghpvc/?username=TheGreatAzizi&repo=GitHub-High-Speed-Mirror&color=red)
 
-- [GitHub High-Speed Mirror](https://gitdl.theazizi.ir)
-
-- [![English](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README-en.md)
+**GitHub High-Speed Mirror** (v2) is an advanced, high-performance gateway built on Cloudflare Workers, designed to mirror GitHub assets at blazing fast speeds. Whether it's a heavy release binary or a raw source code, Mirror.PRO Max ensures low latency and high availability globally.
 
 ---
 
-## 🌟 ویژگی‌ها
+## ✨ Key Features
 
-- **ریسپانسیو و مدرن**: طراحی دارک تم با فونت‌های فارسی خوانا (Pelak و Morabba)  
-- **پشتیبانی از انواع فایل‌ها**: Release، Raw، آرشیوها (.zip, .tar.gz, .rar, .7z)  
-- **سرعت بالا و کش طولانی**: کش یک ساله روی Cloudflare برای افزایش سرعت دانلود  
-- **پشتیبانی از Resume**: دانلود فایل‌های بزرگ بدون نیاز به شروع مجدد  
-- **دسترسی جهانی**: CORS فعال، امکان استفاده مستقیم در مرورگر یا برنامه‌های خارجی  
-- **ظاهر کاربرپسند**: پیش‌نمایش اطلاعات فایل (نام، حجم، نوع) قبل از دانلود  
-
----
-
-## 🛠 تکنولوژی‌ها
-
-- **Cloudflare Workers** – برای اجرای کد سمت سرور  
-- **HTML5 / CSS3 / Vanilla JS** – برای رابط کاربری سریع و ریسپانسیو  
-- **فونت‌های فارسی Pelak و Morabba** – خوانایی و ظاهر حرفه‌ای  
-- **CORS و Cache-Control** – مدیریت دسترسی و سرعت بالا  
+-   **⚡ Extreme Speed:** Leverages Cloudflare's global edge network to cache and stream GitHub assets.
+-   **🔍 Live Metadata Inspector:** Real-time analysis of target URLs (Filename, Payload weight, Edge Latency, and File class).
+-   **🎨 Premium UI:** Modern **Bento-style dashboard** with Glassmorphism, tailored with **Tailwind CSS**.
+-   **💻 Automation Suite:** Automatically generates CLI commands for:
+    -   **Bash (Linux/macOS):** `wget` with content-disposition support.
+    -   **PowerShell (Windows):** Native `Invoke-WebRequest` snippets.
+-   **🔗 Smart Link Normalizer:** Auto-converts GitHub blob URLs (Browser View) into Direct/Raw download links.
+-   **📡 Live Process Log:** A simulated terminal interface for real-time status updates (Handshake, Meta Fetching, etc.).
+-   **📦 High Caching Layer:** Enterprise-grade caching (1 year TTL) to ensure 0-latency repeated downloads.
 
 ---
 
-## ⚡ استفاده
+## 🛠️ How to Deploy
 
-داخل وب‌سایت Cloudflare یک Worker بسازید و محتویات فایل index.js را داخل آن قرار داده و سپس Deploy کنید. 
+Mirror.PRO Max is designed to run exclusively on **Cloudflare Workers**. Follow these simple steps:
 
-وارد آدرس Worker خود شوید:
-
-https://your-worker-domain.com/
-
-> در صورتی که از ایران هستید به علت فیلتر بودن دامین دیفالت ورکر می‌بایست یک ساب‌دامین از دامین خودتون که قبل‌تر بر روی کلودفلیر ست کردید استفاده کنید .
-
-لینک GitHub (Release یا Raw) خود را وارد کنید:  
-
-https://github.com/username/repo/releases/download/v1.0/app.zip
-
-
-از دکمه‌ها برای **دانلود مستقیم** یا **کپی لینک سریع** استفاده کنید.  
-
-> لینک ایجاد شده از طریق Worker، **با کش طولانی و سرعت بالا** قابل دانلود است.
+1.  **Log in** to your [Cloudflare Dashboard](https://dash.cloudflare.com/).
+2.  Go to **Workers & Pages** -> **Create Application**.
+3.  Click **Create Worker** and give it a name (e.g., `github-mirror`).
+4.  Copy the code from the `worker.js` file in this repository.
+5.  Click **Edit Code**, paste the code, and hit **Save and Deploy**.
+6.  *Optional:* Set up a custom domain in the **Settings -> Triggers** tab.
 
 ---
 
-## 🔧 سفارشی‌سازی
+## 🎮 How to Use
 
-- **تغییر رنگ‌ها و تم**: از متغیرهای CSS در `<style>` استفاده کنید  
-- **تغییر فونت فارسی**: فونت‌های Pelak و Morabba را می‌توان با فونت دلخواه جایگزین کرد  
-- **مدت زمان کش**: مقدار `CACHE_TTL` را در worker.js تغییر دهید  
-- **پشتیبانی Resume**: هدر `Range` برای ادامه دانلود فایل‌های بزرگ مدیریت می‌شود  
-
----
-
-## 👤 نویسنده
-
-ساخته شده با ❤️ توسط **TheAzizi**  
-https://x.com/the_azzi
+1.  Paste any GitHub link (Release URL, Raw URL, or Repo Blob) into the search bar.
+2.  Watch the **Metadata Inspector** and **Process Log** analyze the target.
+3.  Click **Execute Download** to start streaming via our edge tunnel.
+4.  Copy the generated **CLI Kits** to use them directly in your servers/terminals.
 
 ---
 
-## 🔗 لینک‌ها مفید
+## 🧬 API Documentation
 
-- [Cloudflare](https://cloudflare.com/)  
+You can also use the Metadata API programmatically:
+
+`GET /api/inspect?url=<YOUR_GITHUB_LINK>`
+
+**Sample Response:**
+```json
+{
+  "success": true,
+  "data": {
+    "filename": "AZU-DL.zip",
+    "size": "2.45 MB",
+    "type": "Archive 📦",
+    "latency": "142ms",
+    "status": "Ready",
+    "source": "https://raw.githubusercontent.com/..."
+  }
+}
+```
+
+---
+## 👨‍💻 Developer & Support
+This project is meticulously crafted by TheGreatAzizi. 
+Stay updated and follow the progress through the links below:
+
+Follow on X (Twitter): https://x.com/the_azzi
+
+Version: 2
