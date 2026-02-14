@@ -199,12 +199,12 @@ function renderUI(origin) {
 
         <!-- NEW FOOTER -->
         <footer class="mt-20 py-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 opacity-60 hover:opacity-100 transition duration-500">
-            <p class="text-[10px] font-bold tracking-[0.2em] text-slate-600 uppercase italic underline decoration-slate-800 underline-offset-8">Enterprise Data Tunnel v3.2</p>
+            <p class="text-[10px] font-bold tracking-[0.2em] text-slate-600 uppercase italic underline decoration-slate-800 underline-offset-8">GHS Mirror v2</p>
             <div class="flex items-center gap-6">
                 <a href="https://github.com/TheGreatAzizi/GitHub-High-Speed-Mirror" target="_blank" class="text-[10px] font-bold flex items-center gap-1.5 hover:text-indigo-400 transition uppercase tracking-widest">
                     <span>GitHub Repo</span>
                 </a>
-                <a href="https://x.com/the_azzi_" target="_blank" class="text-[10px] font-bold flex items-center gap-1.5 hover:text-indigo-400 transition uppercase tracking-widest">
+                <a href="https://x.com/the_azzi" target="_blank" class="text-[10px] font-bold flex items-center gap-1.5 hover:text-indigo-400 transition uppercase tracking-widest">
                     <span>Follow Developer</span>
                 </a>
             </div>
