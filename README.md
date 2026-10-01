@@ -1,5 +1,5 @@
 # 🚀 GitHub High-Speed Mirror
-
+[![DevSponsors](https://devsponsors.github.io/assets/badges/sponsor.svg)](https://devsponsors.github.io)
 [![Cloudflare Workers](https://img.shields.io/badge/Platform-Cloudflare_Workers-F38020?logo=cloudflare)](https://workers.cloudflare.com)
 ![Repository Views](https://komarev.com/ghpvc/?username=TheGreatAzizi&repo=GitHub-High-Speed-Mirror&color=red)
 
