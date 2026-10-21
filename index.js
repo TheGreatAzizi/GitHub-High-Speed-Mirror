@@ -68,9 +68,23 @@ async function handleProxy(request, targetUrl, ctx) {
   return response;
 }
 
+const ALLOWED_HOSTS = new Set([
+  "github.com",
+  "raw.githubusercontent.com",
+  "codeload.github.com",
+  "objects.githubusercontent.com",
+  "api.github.com",
+]);
+
 function normalizeUrl(u) {
   let l = u.trim().startsWith("http") ? u : "https://" + u;
   const o = new URL(l);
+  if (o.protocol !== "https:" && o.protocol !== "http:") {
+    throw new Error("Unsupported protocol");
+  }
+  if (!ALLOWED_HOSTS.has(o.hostname.toLowerCase())) {
+    throw new Error("Host not allowed: only github.com and its asset domains are permitted");
+  }
   if (o.hostname === "github.com" && o.pathname.includes("/blob/")) {
     o.hostname = "raw.githubusercontent.com";
     o.pathname = o.pathname.replace("/blob/", "/");
